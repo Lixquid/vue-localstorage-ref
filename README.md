@@ -29,19 +29,18 @@ setup() {
 
 ## API
 
-### `debounce(func, wait)`
+### `useLocalStorageRef(key, initialValue)`
 
-- **`func`**: `(newValue, oldValue) => returnValue`
+- **`key`**: `string`
 
-  The function that will execute once the wait time is up. It will always be
-  executed with the *last* value of `newValue` in the wait period, and the
-  *first* value of `oldValue` in the wait period. `returnValue` can be a `Promise`!
-- **`wait`**: `number`
+  The key to save the ref to in `localStorage`.
+- **`initialValue`**: `any`
 
-  The number of milliseconds to wait.
-- **Returns**: `(newValue, oldValue) => Promise<typeof returnValue>`
+  The value the ref should be if no value exists in `localStorage`.
+- **Returns**: `Ref`
 
-  A dualbounced `func`. The `Promise` will resolve `wait` milliseconds after the last invocation.
+  A ref that will have an initial value from `localStorage`, and will save
+  changes to `localStorage` on change.
 
 ## License
 
