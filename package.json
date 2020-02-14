@@ -1,6 +1,6 @@
 {
     "name": "vue-localstorage-ref",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "A ref that stores / retrieves from localStorage.",
     "main": "dist/index.js",
     "files": [
