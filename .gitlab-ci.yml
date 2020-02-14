@@ -1,0 +1,18 @@
+image: node
+
+cache:
+    paths:
+        - node_modules/
+
+build:
+    stage: build
+    script:
+        - yarn
+        - yarn build
+
+test:
+    stage: test
+    script:
+        - yarn
+        - "yarn lint:prettier"
+        - "yarn lint:eslint"
